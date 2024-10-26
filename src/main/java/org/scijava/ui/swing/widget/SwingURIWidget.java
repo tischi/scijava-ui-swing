@@ -34,9 +34,13 @@ import org.scijava.plugin.Plugin;
 import org.scijava.ui.UIService;
 import org.scijava.widget.FileWidget;
 import org.scijava.widget.InputWidget;
+import org.scijava.widget.URIWidget;
 import org.scijava.widget.WidgetModel;
 
-import javax.swing.*;
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.event.ActionEvent;
@@ -46,9 +50,10 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 /**
- * Swing implementation of file selector widget.
+ * Swing implementation of URI selector widget.
  * 
- * @author Curtis Rueden
+ * @author Christian Tischer
+ * @author Jan Eglinger
  */
 @Plugin(type = InputWidget.class)
 public class SwingURIWidget extends SwingInputWidget<URI> implements
